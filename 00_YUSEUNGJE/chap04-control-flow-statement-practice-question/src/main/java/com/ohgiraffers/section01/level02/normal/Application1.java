@@ -1,5 +1,6 @@
 package com.ohgiraffers.section01.level02.normal;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Application1 {
@@ -18,7 +19,24 @@ public class Application1 {
          * */
 
         /* 문자열 클래스에서 제공하는 length(), charAt() */
+        Scanner sc = new Scanner(System.in);
+        System.out.print("문자열을 하나 입력하세요 : ");
+        String str = sc.nextLine();
+        System.out.print("찾을 문자를 입력하세요: ");
+        char str2 = sc.nextLine().charAt(0);
+        char[] carr = new char[str.length()];
+        int count = 0;
+        for(int i = 0; i<str.length(); i++){
+            carr[i] = str.charAt(i);
+        }
+        for(int i = 0; i<str.length(); i++){
+            if (carr[i] == str2){
+                count++;
+            }
+        }
+        System.out.println(count);
 
 
+        System.out.println(Arrays.toString(carr));
     }
 }
